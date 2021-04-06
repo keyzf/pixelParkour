@@ -1,13 +1,19 @@
 {
   "group-list": [
     "default",
-    "scene"
+    "scene",
+    "playPanel"
   ],
   "collision-matrix": [
     [
       true
     ],
     [
+      false,
+      false
+    ],
+    [
+      false,
       false,
       false
     ]

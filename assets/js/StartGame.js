@@ -121,6 +121,7 @@ cc.Class({
         this.randomMonsterList = this.randomMonsterList.slice(lastStartIndex, this.randomMonsterList.length)
     },
     run() {
+        this.savePlayerPosition()
         this.isStopped = false
         this.randomMonsterCount = 0
         this.randomMonsterList = []
@@ -163,6 +164,5 @@ cc.Class({
     },
     onLoad() {
         this.savePlayerPosition()
-        this.run();
     },
 });

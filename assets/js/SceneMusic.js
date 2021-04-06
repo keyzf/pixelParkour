@@ -14,7 +14,7 @@ cc.Class({
             default: null
         },
         //音量
-        volume: 0.1,
+        volume: 0.2,
         //是否停止动作
         isStopped: {
             visible: false,
@@ -27,8 +27,7 @@ cc.Class({
     },
     playMusic() {
         if (this.isStopped) return
-        this.audioId = cc.audioEngine.playMusic(this.audio, true)
-        cc.audioEngine.setVolume(this.audioId, this.volume)
+        this.audioId = cc.audioEngine.play(this.audio, true, this.volume)
     },
     pauseMusic() {
         cc.audioEngine.pause(this.audioId)
