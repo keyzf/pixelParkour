@@ -19,7 +19,7 @@ cc.Class({
     },
     onClickPlayBtn() {
         this.play()
-        cc.find("Canvas/PlayPanel").destroy();
+        cc.find("Canvas/FinishedPanel").destroy();
         cc.find("Canvas").getComponent("StartGame").run()
     }
 });
