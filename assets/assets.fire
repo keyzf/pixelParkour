@@ -217,7 +217,7 @@
       "__id__": 3
     },
     "_enabled": true,
-    "_cullingMask": -13,
+    "_cullingMask": -1,
     "_clearFlags": 7,
     "_backgroundColor": {
       "__type__": "cc.Color",
@@ -490,7 +490,7 @@
       "__id__": 9
     },
     "_enabled": true,
-    "_cullingMask": -14,
+    "_cullingMask": -2,
     "_clearFlags": 7,
     "_backgroundColor": {
       "__type__": "cc.Color",

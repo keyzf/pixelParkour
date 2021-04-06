@@ -58,7 +58,7 @@ cc.Class({
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.press, this)
     },
     removeEventListener() {
-        cc.systemEvent.of(cc.systemEvent.EventType.KEY_DOWN, this.press, this)
+        cc.systemEvent.off(cc.SystemEvent.EventType.KEY_DOWN, this.press, this)
     },
     saveInitPosition() {
         const {x, y} = this.node.getBoundingBox()
@@ -84,6 +84,7 @@ cc.Class({
         this.node.stopAllActions()
         //dragonBones没有暂停方法  所以通过timeScale 将播放速度改为0  实现暂停
         this.dragonBones.timeScale = 0
+        this.removeEventListener()
     },
     onDestroy() {
         this.removeEventListener()
