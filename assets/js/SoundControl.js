@@ -9,27 +9,30 @@ cc.Class({
     extends: cc.Component,
     properties: {
         //点击音效
-        clickAudioClip: {
+        audioClip: {
             type: cc.AudioClip,
             default: null
         },
-        //登场背景声音
-        debutAudioClip: {
-            type: cc.AudioClip,
-            default: null
-        },
-        volume: 1
+        //音量
+        volume: 1,
+        //是否循环
+        isLoop: false,
+        //是否在加载的时候播放
+        isOnLoadPlay: false
     },
-    play(audioClip, isLoop = false) {
-        return cc.audioEngine.play(audioClip, isLoop, this.volume)
+    play(audioClip) {
+        return this.audioId = cc.audioEngine.play(audioClip, this.isLoop, this.volume)
     },
     stopAudio(audioId) {
         cc.audioEngine.stop(audioId)
     },
-    onClickEvent() {
-        return this.play(this.clickAudioClip)
+    run() {
+        return this.play(this.audioClip)
     },
-    onLoadDebutAudioClip() {
-        return this.play(this.debutAudioClip, true)
+    onLoad() {
+        if (this.isOnLoadPlay) this.run()
+    },
+    onDestroy() {
+        this.stopAudio(this.audioId)
     }
 });
