@@ -18,7 +18,7 @@ cc.Class({
             type: cc.AudioClip,
             default: null
         },
-        volume: 0.2
+        volume: 1
     },
     play(audioClip, isLoop = false) {
         return cc.audioEngine.play(audioClip, isLoop, this.volume)

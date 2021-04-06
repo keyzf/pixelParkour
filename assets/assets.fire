@@ -401,7 +401,7 @@
     "audio": {
       "__uuid__": "537592c0-4634-4261-a1ad-bcd73a022650"
     },
-    "volume": 0.2,
+    "volume": 1,
     "isStopped": true,
     "audioId": null,
     "_id": "35J16kqYtIS7O9AYpwfRC7"
@@ -1541,7 +1541,7 @@
     "debutAudioClip": {
       "__uuid__": "bb9d1300-666f-4dfc-afdd-ea6bcf268e8f"
     },
-    "volume": 0.2,
+    "volume": 1,
     "_id": "13pP7x/bVLJqgCoN9IL2ZX"
   },
   {

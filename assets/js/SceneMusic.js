@@ -14,7 +14,7 @@ cc.Class({
             default: null
         },
         //音量
-        volume: 0.2,
+        volume: 1,
         //是否停止动作
         isStopped: {
             visible: false,
