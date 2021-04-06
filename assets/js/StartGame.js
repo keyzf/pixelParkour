@@ -13,6 +13,16 @@ cc.Class({
             default: null,
             type: cc.Prefab
         },
+        //开始游戏预制件
+        playPanelFab: {
+            default: null,
+            type: cc.Prefab
+        },
+        //游戏结束预制件
+        finishedPanelFab: {
+            default: null,
+            type: cc.Prefab
+        },
         //玩家
         player: {
             type: cc.Node,
@@ -161,8 +171,18 @@ cc.Class({
                 monsterItem.getComponent("Monster").stop()
             }
         }
+        this.showFinishedPanel()
+    },
+    showPlayPanel() {
+        const playPanelNode = cc.instantiate(this.playPanelFab)
+        this.node.addChild(playPanelNode)
+    },
+    showFinishedPanel() {
+        const finishedPanelFab = cc.instantiate(this.finishedPanelFab)
+        this.node.addChild(finishedPanelFab)
     },
     onLoad() {
         this.savePlayerPosition()
+        this.showPlayPanel()
     },
 });
