@@ -88,8 +88,5 @@ cc.Class({
     stop() {
         this.isStopped = true
         this.node.stopAllActions()
-    },
-    onLoad() {
-        this.run()
-    },
+    }
 });

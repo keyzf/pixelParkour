@@ -27,7 +27,7 @@ cc.Class({
         //是否停止动作
         isStopped: {
             visible: false,
-            default: false
+            default: true
         },
         //当前骨骼对象
         dragonBones: {
@@ -61,7 +61,7 @@ cc.Class({
         cc.systemEvent.of(cc.systemEvent.EventType.KEY_DOWN, this.press, this)
     },
     saveInitPosition() {
-        const {x, y} = this.node
+        const {x, y} = this.node.getBoundingBox()
         this.nodeInitPosition = {x, y}
     },
     saveDragonBones() {
@@ -70,6 +70,9 @@ cc.Class({
     run() {
         this.isStopped = false
         this.addEventListener()
+        this.saveDragonBones()
+        this.saveInitPosition()
+        this.dragonBones.timeScale = 1
     },
     resume() {
         this.isStopped = false
@@ -88,5 +91,8 @@ cc.Class({
     onLoad() {
         this.saveDragonBones()
         this.saveInitPosition()
+        if (this.isStopped) {
+            this.stop()
+        }
     }
 });
