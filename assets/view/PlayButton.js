@@ -13,17 +13,22 @@ cc.Class({
     },
     onClickPlayBtn() {
         this.play()
-        cc.find("Canvas/PlayPanel").destroy();
-        cc.find("Canvas").getComponent("StartGame").run()
+        const rootNodePath = `RootNode`
+        const panelNodePath = `${rootNodePath}/PanelNode`
+        cc.find(`${panelNodePath}/PlayPanel`).destroy();
+        cc.find(`${rootNodePath}`).getComponent("StartGame").run()
+    },
+    loadAudioClip() {
+        const path = "audio/click"
+        cc.resources.load(path, cc.AudioClip, (v, audioClip) => {
+            this._audioClip = audioClip
+        })
     },
     initProperty() {
         this._audioClip = null
     },
     onLoad() {
         this.initProperty()
-        const path = "audio/click"
-        cc.resources.load(path, cc.AudioClip, (v, audioClip) => {
-            this._audioClip = audioClip
-        })
+        this.loadAudioClip()
     },
 });

@@ -64,6 +64,7 @@ cc.Class({
     },
     //生成怪物
     generateMonsterItem(progressCallback) {
+        const renderNodeName = "PanelNode"
         const monsterItem = new cc.instantiate(this.monsterPrefab)
         //Monster组件添加StartGame引用
         //给Monster调用stop方法
@@ -74,7 +75,7 @@ cc.Class({
         const y = this.generateMonsterItemY() - 10
 
         monsterItem.setPosition(cc.v2(x, y))
-        this.node.addChild(monsterItem)
+        this.node.getChildByName(renderNodeName).addChild(monsterItem)
 
         return {
             monsterItem,
@@ -119,13 +120,15 @@ cc.Class({
     },
     //显示开始游戏界面
     showPlayPanel() {
+        const renderNodeName = "PanelNode"
         const playPanelNode = cc.instantiate(this.playPanelPrefab)
-        this.node.addChild(playPanelNode)
+        this.node.getChildByName(renderNodeName).addChild(playPanelNode)
     },
     //显示游戏结束界面
     showFinishedPanel() {
+        const renderNodeName = "PanelNode"
         const finishedPanelPrefab = cc.instantiate(this.finishedPanelPrefab)
-        this.node.addChild(finishedPanelPrefab)
+        this.node.getChildByName(renderNodeName).addChild(finishedPanelPrefab)
     },
     //保存英雄位置
     saveHeroPosition() {

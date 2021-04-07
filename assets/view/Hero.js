@@ -13,7 +13,7 @@ cc.Class({
         //按下过渡
         jumpDurationPress: 0.3,
         //最大跳跃高度
-        maxJumpHeight: 0,
+        maxJumpHeight: 200,
     },
     jump() {
         if (this._isStopped) return
