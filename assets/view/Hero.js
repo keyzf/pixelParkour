@@ -14,32 +14,12 @@ cc.Class({
         jumpDurationPress: 0.3,
         //最大跳跃高度
         maxJumpHeight: 0,
-        //是否松开了上键 防止重复触发缓动效果
-        isPressKeyUp: {
-            visible: false,
-            default: true
-        },
-        //node的初始化坐标
-        nodeInitPosition: {
-            visible: false,
-            default: null
-        },
-        //是否停止动作
-        isStopped: {
-            visible: false,
-            default: true
-        },
-        //当前骨骼对象
-        dragonBones: {
-            visible: false,
-            default: null
-        }
     },
     jump() {
-        if (this.isStopped) return
+        if (this._isStopped) return
         this.isPressKeyUp = false
         const up = cc.tween().to(this.jumpDurationOff, {y: this.maxJumpHeight}, {easing: "sineOut"})
-        const down = cc.tween().to(this.jumpDurationPress, {y: this.nodeInitPosition.y}, {easing: "sineIn"})
+        const down = cc.tween().to(this.jumpDurationPress, {y: this._nodeInitPosition.y}, {easing: "sineIn"})
         cc.tween(this.node)
             .sequence(up, down)
             .call(() => {
@@ -62,37 +42,48 @@ cc.Class({
     },
     saveInitPosition() {
         const {x, y} = this.node.getBoundingBox()
-        this.nodeInitPosition = {x, y}
+        this._nodeInitPosition = {x, y}
     },
     saveDragonBones() {
-        this.dragonBones = this.getComponent(dragonBones.ArmatureDisplay)
+        this._dragonBones = this.getComponent(dragonBones.ArmatureDisplay)
     },
     run() {
-        this.isStopped = false
+        this._isStopped = false
         this.addEventListener()
         this.saveDragonBones()
         this.saveInitPosition()
-        this.dragonBones.timeScale = 1
+        this._dragonBones.timeScale = 1
     },
     resume() {
-        this.isStopped = false
+        this._isStopped = false
         this.node.resumeAllActions()
-        this.dragonBones.timeScale = 1
+        this._dragonBones.timeScale = 1
     },
     stop() {
-        this.isStopped = true
+        this._isStopped = true
         this.node.stopAllActions()
         //dragonBones没有暂停方法  所以通过timeScale 将播放速度改为0  实现暂停
-        this.dragonBones.timeScale = 0
+        this._dragonBones.timeScale = 0
         this.removeEventListener()
     },
     onDestroy() {
         this.removeEventListener()
     },
+    initProperty() {
+        //是否松开了上键 防止重复触发缓动效果
+        this.isPressKeyUp = true
+        //node的初始化坐标
+        this._nodeInitPosition = {x: 0, y: 0}
+        //是否停止动作
+        this._isStopped = true
+        //当前骨骼对象
+        this._dragonBones = null
+    },
     onLoad() {
+        this.initProperty()
         this.saveDragonBones()
         this.saveInitPosition()
-        if (this.isStopped) {
+        if (this._isStopped) {
             this.stop()
         }
     }

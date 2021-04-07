@@ -8,18 +8,22 @@
 cc.Class({
     extends: cc.Component,
     properties: {},
-    onLoad() {
-        const path = "audio/click"
-        cc.resources.load(path, cc.AudioClip, (v, audioClip) => {
-            this.audioClip = audioClip
-        })
-    },
     play() {
-        cc.audioEngine.play(this.audioClip, false, 1)
+        cc.audioEngine.play(this._audioClip, false, 1)
     },
     onClickPlayBtn() {
         this.play()
         cc.find("Canvas/FinishedPanel").destroy();
         cc.find("Canvas").getComponent("StartGame").run()
+    },
+    initProperty() {
+        this._audioClip = null
+    },
+    onLoad() {
+        this.initProperty()
+        const path = "audio/click"
+        cc.resources.load(path, cc.AudioClip, (v, audioClip) => {
+            this._audioClip = audioClip
+        })
     }
 });

@@ -7,20 +7,9 @@
 
 cc.Class({
     extends: cc.Component,
-    properties: {
-        //是否停止动作
-        isStopped: {
-            visible: false,
-            default: false
-        },
-        //当前骨骼对象
-        dragonBones: {
-            visible: false,
-            default: null
-        }
-    },
+    properties: {},
     update() {
-        if (!this.isStopped) {
+        if (!this._isStopped) {
             //对骨骼动画周边多余的空白区域做出修正
             if (this.getHeroDistance() <= this.getHeroBoundingBox().width * 0.76) {
                 this.stop()
@@ -43,18 +32,25 @@ cc.Class({
         return Math.abs(mag)
     },
     saveDragonBones() {
-        this.dragonBones = this.getComponent(dragonBones.ArmatureDisplay)
+        this._dragonBones = this.getComponent(dragonBones.ArmatureDisplay)
     },
     run() {
         this.saveDragonBones()
     },
     stop() {
-        this.isStopped = true
+        this._isStopped = true
         this.node.stopAllActions()
         //dragonBones没有暂停方法  所以通过timeScale 将播放速度改为0  实现暂停
-        this.dragonBones.timeScale = 0
+        this._dragonBones.timeScale = 0
+    },
+    initProperty() {
+        //是否停止动作
+        this._isStopped = false
+        //当前骨骼对象
+        this._dragonBones = null
     },
     onLoad() {
+        this.initProperty()
         this.saveDragonBones()
     }
 });
