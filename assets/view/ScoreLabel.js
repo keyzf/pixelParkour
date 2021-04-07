@@ -21,6 +21,7 @@ cc.Class({
         const multiple = 1000
         if (this._score > 0 && Number.isInteger((this._score / multiple))) {
             this.getComponent("SoundControl").run()
+            this.getComponent("Flash").run()
         }
     },
     setString() {

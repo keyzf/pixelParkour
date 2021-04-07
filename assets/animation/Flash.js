@@ -8,7 +8,7 @@
 cc.Class({
     extends: cc.Component,
     properties: {
-        duration: 0.5,
+        duration: 0.1,
         //是否在加载的时候播放
         isOnLoadPlay: true
     },
@@ -19,12 +19,11 @@ cc.Class({
         return cc.tween(this.node).to(this.duration, {opacity: 0}).start()
     },
     run() {
-        cc.tween(this.node).sequence(this.show(), this.hidden()).start()
+        cc.tween(this.node).sequence(this.hidden(), this.show(), this.hidden(), this.show(), this.hidden(), this.show(),).start()
     },
     onLoad() {
         if (this.isOnLoadPlay) this.show()
     },
     onDestroy() {
-        if (this.isOnLoadPlay) this.hidden()
     }
 });

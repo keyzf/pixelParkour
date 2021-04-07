@@ -589,6 +589,7 @@
     },
     "_enabled": true,
     "duration": 0.5,
+    "isOnLoadPlay": true,
     "_id": ""
   },
   {

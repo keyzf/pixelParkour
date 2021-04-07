@@ -648,10 +648,10 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 27
+        "__id__": 28
       },
       {
-        "__id__": 28
+        "__id__": 29
       }
     ],
     "_prefab": null,
@@ -1095,6 +1095,9 @@
       },
       {
         "__id__": 26
+      },
+      {
+        "__id__": 27
       }
     ],
     "_prefab": null,
@@ -1204,6 +1207,18 @@
     "isLoop": false,
     "isOnLoadPlay": false,
     "_id": "f1zNRKanpL3a5p1WKEm5jr"
+  },
+  {
+    "__type__": "3e417+RFUVLBpbz8KN7193l",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 23
+    },
+    "_enabled": true,
+    "duration": 0.1,
+    "isOnLoadPlay": true,
+    "_id": "ddvqnCZhhJwYjVyf9xksKG"
   },
   {
     "__type__": "b4bdd6d12lDjaAoILdLgRKM",
