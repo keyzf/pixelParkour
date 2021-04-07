@@ -17,13 +17,13 @@
   "optimizeHotUpdate": false,
   "md5Cache": true,
   "nativeMd5Cache": true,
-  "encryptJs": true,
+  "encryptJs": false,
   "xxteaKey": "e58ae1a2-e5a8-47",
   "zipCompressJs": true,
   "fb-instant-games": {},
   "android": {
     "REMOTE_SERVER_ROOT": "",
-    "packageName": "org.cocos2d.demo"
+    "packageName": "org.wanland.game.pixelparkour"
   },
   "ios": {
     "REMOTE_SERVER_ROOT": "",
@@ -49,5 +49,6 @@
     "scheme": "https",
     "skipRecord": false
   },
-  "appBundle": false
+  "appBundle": false,
+  "includeSDKBox": false
 }

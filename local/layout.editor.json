@@ -104,6 +104,12 @@
       "y": 206,
       "width": 500,
       "height": 528
+    },
+    "runtime-dev-tools": {
+      "x": 390,
+      "y": 156,
+      "width": 900,
+      "height": 628
     }
   },
   "panelLabelWidth": {

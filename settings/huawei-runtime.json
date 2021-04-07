@@ -1,0 +1,22 @@
+{
+  "package": "org.wanland.game.pixelparkour",
+  "name": "像素跑酷",
+  "icon": "/Users/rockey/pixelParkour/android/playstore-icon.png",
+  "versionName": "1.0.0",
+  "versionCode": "1",
+  "minPlatformVersion": "1",
+  "manifestPath": "",
+  "deviceOrientation": "landscape",
+  "fullScreen": true,
+  "logLevel": "log",
+  "runRelease": false,
+  "appType": "fastgame",
+  "tinyPackageServer": "",
+  "useDebugKey": true,
+  "privatePath": "",
+  "certificatePath": "",
+  "disabledMode": "disabled is-disabled",
+  "npmPath": "",
+  "showNpmPath": false,
+  "packFirstScreenRes": false
+}
