@@ -3,7 +3,9 @@
     "default",
     "scene",
     "playPanel",
-    "finishedPanel"
+    "finishedPanel",
+    "hero",
+    "monster"
   ],
   "collision-matrix": [
     [
@@ -19,6 +21,21 @@
       false
     ],
     [
+      false,
+      false,
+      false,
+      false
+    ],
+    [
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    [
+      false,
+      false,
       false,
       false,
       false,

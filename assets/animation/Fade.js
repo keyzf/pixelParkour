@@ -7,14 +7,17 @@
 
 cc.Class({
     extends: cc.Component,
-    properties: {},
-    initProperty() {
-        this._duration = 0.5
+    properties: {
+        duration: 0.5
     },
-    onLoad() {
-        cc.tween(this.node).to(this._duration, {opacity: 255}).start()
+    initProperty() {
+
+    },
+    start() {
+        this.initProperty()
+        cc.tween(this.node).to(this.duration, {opacity: 255}).start()
     },
     onDestroy() {
-        cc.tween(this.node).to(this._duration, {opacity: 0}).start()
+        cc.tween(this.node).to(this.duration, {opacity: 0}).start()
     }
 });
