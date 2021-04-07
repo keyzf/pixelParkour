@@ -9,27 +9,22 @@ cc.Class({
     extends: cc.Component,
     properties: {
         //怪物预制件
-        monsterFab: {
+        monsterPrefab: {
             default: null,
             type: cc.Prefab
         },
         //开始游戏预制件
-        playPanelFab: {
+        playPanelPrefab: {
             default: null,
             type: cc.Prefab
         },
         //游戏结束预制件
-        finishedPanelFab: {
+        finishedPanelPrefab: {
             default: null,
             type: cc.Prefab
         },
         //玩家
-        player: {
-            type: cc.Node,
-            default: null
-        },
-        //场景音乐
-        sceneMusic: {
+        hero: {
             type: cc.Node,
             default: null
         },
@@ -38,46 +33,44 @@ cc.Class({
             type: cc.Camera,
             default: null
         },
-        //是否停止动作
-        isStopped: {
-            visible: false,
-            default: false
-        },
         //一次生成怪物的个数
         generateMonsterItemCount: 2
     },
-    getPlayerWidth() {
-        return this.player.getBoundingBox().width
+    //英雄宽度
+    getHeroWidth() {
+        return this.hero.getBoundingBox().width
     },
+    //怪物x轴坐标 以战场最大宽度为起点
     generateMonsterItemX() {
-        //怪物x轴坐标 以战场最大宽度为起点
         return this.node.width
     },
+    // 怪物y轴坐标 以玩家的y轴为准
     generateMonsterItemY() {
-        // 怪物y轴坐标 以玩家的y轴为准
-        return parseInt(this.playerPosition.y)
+        return parseInt(this.heroPosition.y)
     },
+    //怪物之间最小间距为玩家+(怪物*2)的2倍宽度
     generateMonsterItemMinSpacing() {
-        //怪物之间最小间距为玩家+(怪物*2)的3倍宽度
-        return (this.getPlayerWidth() + (this.monsterFab.data.width * this.generateMonsterItemCount)) * 2
+        return (this.getHeroWidth() + (this.monsterPrefab.data.width * this.generateMonsterItemCount)) * 2
     },
+    //怪物之间最大间距为战场宽度
     generateMonsterItemMaxSpacing() {
-        //怪物之间最大间距为战场宽度
         return this.node.width
     },
-    generateRandomSpacing() {
+    //怪物随机间距大小
+    generateMonsterRandomSpacing() {
         let min = this.generateMonsterItemMinSpacing()
         let max = this.generateMonsterItemMaxSpacing()
         return parseInt(Math.random() * (max - min + 1) + min);
     },
+    //生成怪物
     generateMonsterItem(progressCallback) {
-        const monsterItem = new cc.instantiate(this.monsterFab)
+        const monsterItem = new cc.instantiate(this.monsterPrefab)
         //Monster组件添加StartGame引用
         //给Monster调用stop方法
         monsterItem.getComponent("Monster").StartGame = this
 
-        //减去 10  是因为玩家的骨骼动画上下有多余空白
         const x = this.generateMonsterItemX()
+        //减去 10  是因为玩家的骨骼动画上下有多余空白
         const y = this.generateMonsterItemY() - 10
 
         monsterItem.setPosition(cc.v2(x, y))
@@ -98,91 +91,81 @@ cc.Class({
                 }).start()
         }
     },
-    monsterController() {
-        if (this.isStopped) return;
+    //生成怪物控制器
+    generateMonsterController() {
+        if (this._isStopped) return;
         //当前生成的怪物数量已经达到最大
-        if (this.randomMonsterCount >= this.generateMonsterItemCount) {
-            this.randomMonsterCount = 0
-            this.monsterController()
+        if (this._randomMonsterCount >= this.generateMonsterItemCount) {
+            this._randomMonsterCount = 0
+            this.generateMonsterController()
             return
         }
 
-        //当前怪物是否已经触发了一次 monsterController
-        //防止progress一直调用 monsterController
+        //当前怪物是否已经触发了一次 generateMonsterController
+        //防止progress一直调用 generateMonsterController
         let isGenerated = false
 
         const generateMonsterItem = this.generateMonsterItem((start, end, current, ratio) => {
             const currentProgressPosition = parseInt(Math.abs(end - start) * ratio)
-            const generateRandomSpacing = this.generateRandomSpacing()
-            if ((currentProgressPosition > generateRandomSpacing) && !isGenerated) {
+            const generateMonsterRandomSpacing = this.generateMonsterRandomSpacing()
+            if ((currentProgressPosition > generateMonsterRandomSpacing) && !isGenerated) {
                 isGenerated = true
-                this.monsterController()
+                this.generateMonsterController()
             }
         })
-        this.randomMonsterCount++
-        this.randomMonsterList.push(generateMonsterItem)
+
+        this._randomMonsterCount++
+        this._randomMonsterList.push(generateMonsterItem)
     },
-    savePlayerPosition() {
-        const {x, y} = this.player.getBoundingBox().center
-        this.playerPosition = {x, y}
-    },
-    removeDestroyedMonster() {
-        const lastStartIndex = this.randomMonsterList.length - this.generateMonsterItemCount
-        this.randomMonsterList = this.randomMonsterList.slice(lastStartIndex, this.randomMonsterList.length)
-    },
-    run() {
-        this.savePlayerPosition()
-        this.isStopped = false
-        this.randomMonsterCount = 0
-        this.randomMonsterList = []
-        this.monsterController()
-        this.player.getComponent("Player").run()
-        this.sceneMusic.getComponent("SceneMusic").run()
-        this.unlimitedScenesCamera.getComponent("UnlimitedScenesCamera").run()
-    },
-    resume() {
-        this.isStopped = false
-        this.node.resumeAllActions()
-        this.player.getComponent("Player").resume()
-        this.sceneMusic.getComponent("SceneMusic").resume()
-        this.unlimitedScenesCamera.getComponent("UnlimitedScenesCamera").resume()
-        for (let i = 0; i < this.randomMonsterList.length; i++) {
-            const monsterItem = this.randomMonsterList[i].monsterItem
-            const item = this.randomMonsterList[i].tween
-            item.resume()
-            if (monsterItem) {
-                monsterItem.getComponent("Monster").stop()
-            }
-        }
-    },
-    stop() {
-        this.isStopped = true
-        this.node.stopAllActions()
-        this.player.getComponent("Player").stop()
-        this.sceneMusic.getComponent("SceneMusic").stop()
-        this.unlimitedScenesCamera.getComponent("UnlimitedScenesCamera").stop()
-        //移除已经不显示的怪物
-        this.removeDestroyedMonster()
-        for (let i = 0; i < this.randomMonsterList.length; i++) {
-            const monsterItem = this.randomMonsterList[i].monsterItem
-            const item = this.randomMonsterList[i].tween
-            item.stop()
-            if (monsterItem) {
-                monsterItem.getComponent("Monster").stop()
-            }
-        }
-        this.showFinishedPanel()
-    },
+    //显示开始游戏界面
     showPlayPanel() {
-        const playPanelNode = cc.instantiate(this.playPanelFab)
+        const playPanelNode = cc.instantiate(this.playPanelPrefab)
         this.node.addChild(playPanelNode)
     },
+    //显示游戏结束界面
     showFinishedPanel() {
-        const finishedPanelFab = cc.instantiate(this.finishedPanelFab)
-        this.node.addChild(finishedPanelFab)
+        const finishedPanelPrefab = cc.instantiate(this.finishedPanelPrefab)
+        this.node.addChild(finishedPanelPrefab)
+    },
+    //保存英雄位置
+    saveHeroPosition() {
+        const {x, y} = this.hero.getBoundingBox().center
+        this.heroPosition = {x, y}
+    },
+    //移除所有怪物
+    removeAllMonster() {
+        for (let value of this._randomMonsterList) {
+            if (cc.isValid(value.monsterItem)) {
+                value.monsterItem.destroy()
+            }
+        }
+        this._randomMonsterList = []
+    },
+    run() {
+        this.initProperty()
+        this.saveHeroPosition()
+        this.generateMonsterController()
+        this.hero.getComponent("Hero").run()
+        this._audioId = this.getComponent("SoundControl").run()
+        this.unlimitedScenesCamera.getComponent("UnlimitedScenesCamera").run()
+    },
+    stop() {
+        this._isStopped = true
+        this.node.stopAllActions()
+        this.hero.getComponent("Hero").stop()
+        this.getComponent("SoundControl").stopAudio(this._audioId)
+        this.unlimitedScenesCamera.getComponent("UnlimitedScenesCamera").stop()
+        this.removeAllMonster()
+    },
+    initProperty() {
+        this._isStopped = false
+        this._audioId = null
+        this._randomMonsterCount = 0
+        this._randomMonsterList = []
     },
     onLoad() {
-        this.savePlayerPosition()
+        this.initProperty()
+        this.saveHeroPosition()
         this.showPlayPanel()
     },
 });

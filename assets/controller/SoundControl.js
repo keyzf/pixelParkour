@@ -21,7 +21,7 @@ cc.Class({
         isOnLoadPlay: false
     },
     play(audioClip) {
-        return this.audioId = cc.audioEngine.play(audioClip, this.isLoop, this.volume)
+        return this._audioId = cc.audioEngine.play(audioClip, this.isLoop, this.volume)
     },
     stopAudio(audioId) {
         cc.audioEngine.stop(audioId)
@@ -29,10 +29,13 @@ cc.Class({
     run() {
         return this.play(this.audioClip)
     },
+    initProperty() {
+        this._audioId = null
+    },
     onLoad() {
         if (this.isOnLoadPlay) this.run()
     },
     onDestroy() {
-        this.stopAudio(this.audioId)
+        this.stopAudio(this._audioId)
     }
 });
