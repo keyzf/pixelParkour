@@ -84,8 +84,7 @@
         "game-window",
         "inspector"
       ]
-    },
-    "worker": {}
+    }
   },
   "panels": {
     "preferences": {
