@@ -147,14 +147,14 @@ cc.Class({
         this.generateMonsterController()
         this.hero.getComponent("Hero").run()
         this._audioId = this.getComponent("SoundControl").run()
-        this.unlimitedScenesCamera.getComponent("UnlimitedScenesCamera").run()
+        // this.unlimitedScenesCamera.getComponent("UnlimitedScenesCamera").run()
     },
     stop() {
         this._isStopped = true
         this.node.stopAllActions()
         this.hero.getComponent("Hero").stop()
         this.getComponent("SoundControl").stopAudio(this._audioId)
-        this.unlimitedScenesCamera.getComponent("UnlimitedScenesCamera").stop()
+        // this.unlimitedScenesCamera.getComponent("UnlimitedScenesCamera").stop()
         this.removeAllMonster()
     },
     initProperty() {
