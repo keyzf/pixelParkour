@@ -203,6 +203,12 @@ cc.Class({
         this.saveHeroPosition()
         this.clearRoundRuntimeIntervalTiming()
         this.showPlayPanel()
+        cc.find("CameraNode")
+            .getComponent("TouchEventControl")
+            .on(cc.Node.EventType.TOUCH_START, () => {
+                if (this._isStopped) return
+                this.hero.getComponent("Hero").touchStart()
+            })
     },
     onDestroy() {
         this.clearRoundRuntimeIntervalTiming()
