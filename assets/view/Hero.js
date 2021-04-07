@@ -41,7 +41,6 @@ cc.Class({
     },
     addEventListener() {
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.press, this)
-        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.press, this)
     },
     removeEventListener() {
         cc.systemEvent.off(cc.SystemEvent.EventType.KEY_DOWN, this.press, this)
