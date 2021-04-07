@@ -159,6 +159,7 @@ cc.Class({
         this.getComponent("SoundControl").stopAudio(this._audioId)
         // this.unlimitedScenesCamera.getComponent("UnlimitedScenesCamera").stop()
         this.removeAllMonster()
+        this.showFinishedPanel()
     },
     initProperty() {
         this._isStopped = false
