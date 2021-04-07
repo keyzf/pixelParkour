@@ -29,7 +29,11 @@ cc.Class({
             default: null
         },
         //一次生成怪兽的个数
-        generateMonsterItemCount: 2
+        generateMonsterItemCount: 2,
+        scoreLabel: {
+            type: cc.Label,
+            default: null
+        }
     },
     //英雄宽度
     getHeroWidth() {
@@ -113,10 +117,14 @@ cc.Class({
         this._randomMonsterCount++
         this._randomMonsterList.push(generateMonsterItem)
     },
+    resetScore() {
+        this.scoreLabel.getComponent("ScoreLabel").setText(this._score)
+    },
     addScore() {
         //一个怪兽相当于多少分
         const baseUnit = 100
         this._score += baseUnit
+        this.scoreLabel.getComponent("ScoreLabel").setText(this._score)
     },
     //显示开始游戏界面
     showPlayPanel() {
@@ -146,6 +154,7 @@ cc.Class({
     },
     run() {
         this.initProperty()
+        this.resetScore()
         this.generateMonsterController()
         this.hero.getComponent("Hero").run()
         this._audioId = this.getComponent("SoundControl").run()
@@ -157,7 +166,6 @@ cc.Class({
         this.getComponent("SoundControl").stopAudio(this._audioId)
         this.removeAllMonster()
         this.showFinishedPanel()
-        console.log("分数:" + this._score)
     },
     initProperty() {
         this._isStopped = false
