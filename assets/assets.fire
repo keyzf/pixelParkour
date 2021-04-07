@@ -1216,7 +1216,7 @@
     "audioClip": {
       "__uuid__": "67d55546-1c73-4883-a3d9-8d0ff09d0f5a"
     },
-    "volume": 1,
+    "volume": 1.3,
     "isLoop": false,
     "isOnLoadPlay": false,
     "_id": "f1zNRKanpL3a5p1WKEm5jr"
@@ -1257,7 +1257,7 @@
     "scoreLabel": {
       "__id__": 25
     },
-    "secondIncreaseSpacing": 0.1,
+    "secondIncreaseSpacing": 0.05,
     "_id": "e0Gv6MuTlEpoMvb8nxV7Qg"
   },
   {
@@ -1271,7 +1271,7 @@
     "audioClip": {
       "__uuid__": "bb4d48ce-a380-4994-86ca-c9d5467b106d"
     },
-    "volume": 0.4,
+    "volume": 0.3,
     "isLoop": true,
     "isOnLoadPlay": false,
     "_id": "c7flJjjv1PI4fksH+S7ggL"

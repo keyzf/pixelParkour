@@ -35,7 +35,7 @@ cc.Class({
             default: null
         },
         //每秒速度加快多少
-        secondIncreaseSpacing: 0.1
+        secondIncreaseSpacing: 0.05
     },
     //英雄宽度
     getHeroWidth() {
@@ -65,9 +65,9 @@ cc.Class({
     },
     generateMonsterMoveSpeed() {
         //最小时间间隔
-        const minSpeedSpacing = 1
+        const minSpeedSpacing = 2
         //最大时间间隔
-        const maxSpeedSpacing = 5
+        const maxSpeedSpacing = 4.5
         let n = parseFloat(this._roundRuntimeInterval * this.secondIncreaseSpacing).toFixed(2)
         n = maxSpeedSpacing - n
         if (n > maxSpeedSpacing) n = maxSpeedSpacing

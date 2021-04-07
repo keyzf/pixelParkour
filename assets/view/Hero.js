@@ -34,7 +34,7 @@ cc.Class({
             .start()
     },
     touchStart() {
-        this.jump()
+        if (this.isPressKeyUp) this.jump()
     },
     press(event) {
         if (event.keyCode === cc.macro.KEY.up && this.isPressKeyUp) this.jump()
