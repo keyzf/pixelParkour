@@ -1217,7 +1217,7 @@
     },
     "_enabled": true,
     "duration": 0.1,
-    "isOnLoadPlay": true,
+    "isOnLoadPlay": false,
     "_id": "ddvqnCZhhJwYjVyf9xksKG"
   },
   {
@@ -1244,6 +1244,7 @@
     "scoreLabel": {
       "__id__": 24
     },
+    "secondIncreaseSpacing": 0.1,
     "_id": "e0Gv6MuTlEpoMvb8nxV7Qg"
   },
   {

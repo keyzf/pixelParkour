@@ -33,7 +33,9 @@ cc.Class({
         scoreLabel: {
             type: cc.Label,
             default: null
-        }
+        },
+        //每秒速度加快多少
+        secondIncreaseSpacing: 0.1
     },
     //英雄宽度
     getHeroWidth() {
@@ -61,6 +63,17 @@ cc.Class({
         let max = this.generateMonsterItemMaxSpacing()
         return parseInt(Math.random() * (max - min + 1) + min);
     },
+    generateMonsterMoveSpeed() {
+        //最小时间间隔
+        const minSpeedSpacing = 1
+        //最大时间间隔
+        const maxSpeedSpacing = 5
+        let n = parseFloat(this._roundRuntimeInterval * this.secondIncreaseSpacing).toFixed(2)
+        n = maxSpeedSpacing - n
+        if (n > maxSpeedSpacing) n = maxSpeedSpacing
+        if (n < minSpeedSpacing) n = minSpeedSpacing
+        return n
+    },
     //生成怪兽
     generateMonsterItem(progressCallback) {
         const renderNodeName = "PanelNode"
@@ -75,12 +88,11 @@ cc.Class({
 
         monsterItem.setPosition(cc.v2(x, y))
         this.node.getChildByName(renderNodeName).addChild(monsterItem)
-
         return {
             monsterItem,
             tween: cc.tween(monsterItem)
                 //将monsterItem完全移除战场 所以x包括了怪兽本身的宽度
-                .to(4, {x: -this.node.width + (-monsterItem.width)}, {
+                .to(this.generateMonsterMoveSpeed(), {x: -this.node.width + (-monsterItem.width)}, {
                     progress: (start, end, current, ratio) => {
                         if (progressCallback) progressCallback(start, end, current, ratio)
                         return start + (end - start) * ratio
@@ -152,12 +164,19 @@ cc.Class({
         }
         this._randomMonsterList = []
     },
+    clearRoundRuntimeIntervalTiming() {
+        clearInterval(this._roundRuntimeIntervalTimer)
+    },
+    setRoundRuntimeIntervalTiming() {
+        this._roundRuntimeIntervalTimer = setInterval(() => this._roundRuntimeInterval++, 1000)
+    },
     run() {
         this.initProperty()
         this.resetScore()
         this.generateMonsterController()
         this.hero.getComponent("Hero").run()
         this._audioId = this.getComponent("SoundControl").run()
+        this.setRoundRuntimeIntervalTiming()
     },
     stop() {
         this._isStopped = true
@@ -165,6 +184,7 @@ cc.Class({
         this.hero.getComponent("Hero").stop()
         this.getComponent("SoundControl").stopAudio(this._audioId)
         this.removeAllMonster()
+        this.clearRoundRuntimeIntervalTiming()
         this.showFinishedPanel()
     },
     initProperty() {
@@ -173,10 +193,18 @@ cc.Class({
         this._randomMonsterCount = 0
         this._randomMonsterList = []
         this._score = 0
+        //一局游戏运行的时间标记 秒
+        this._roundRuntimeInterval = 0
+        //循环定时器
+        this._roundRuntimeIntervalTimer = null
     },
     onLoad() {
         this.initProperty()
         this.saveHeroPosition()
+        this.clearRoundRuntimeIntervalTiming()
         this.showPlayPanel()
     },
+    onDestroy() {
+        this.clearRoundRuntimeIntervalTiming()
+    }
 });

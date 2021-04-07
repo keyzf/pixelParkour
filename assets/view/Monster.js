@@ -40,7 +40,7 @@ cc.Class({
         //但是因为这个骨骼动画是一个竖着的长方形 所以左右跟上下的中心不一样  这里需要做调整
         const nodePos = new cc.Vec2(this.getMonsterBoundingBox().center.x, this.getMonsterBoundingBox().origin.y)
         const heroPos = new cc.Vec2(this.getHeroBoundingBox().center.x, this.getHeroBoundingBox().origin.y)
-        let mag = parseInt(nodePos.sub(new cc.Vec2(heroPos.x, heroPos.y)).mag())
+        const mag = parseInt(nodePos.sub(new cc.Vec2(heroPos.x, heroPos.y)).mag())
         return Math.abs(mag)
     },
     addScore() {
