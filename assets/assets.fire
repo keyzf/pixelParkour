@@ -177,7 +177,7 @@
       "array": [
         0,
         0,
-        466.78769263981246,
+        465.92166723602804,
         0,
         0,
         0,
@@ -447,7 +447,7 @@
       "array": [
         0,
         0,
-        466.78769263981246,
+        465.92166723602804,
         0,
         0,
         0,
@@ -914,7 +914,6 @@
     "hero": {
       "__id__": 14
     },
-    "unlimitedScenesCamera": null,
     "generateMonsterItemCount": 2,
     "_id": "e0Gv6MuTlEpoMvb8nxV7Qg"
   },

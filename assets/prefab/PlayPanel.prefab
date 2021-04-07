@@ -14,7 +14,7 @@
   {
     "__type__": "cc.Node",
     "_name": "PlayPanel",
-    "_objFlags": 0,
+    "_objFlags": 512,
     "_parent": null,
     "_children": [
       {
@@ -39,7 +39,7 @@
     "_prefab": {
       "__id__": 18
     },
-    "_opacity": 255,
+    "_opacity": 0,
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
@@ -89,7 +89,7 @@
   {
     "__type__": "cc.Node",
     "_name": "Logo",
-    "_objFlags": 0,
+    "_objFlags": 512,
     "_parent": {
       "__id__": 1
     },
@@ -125,7 +125,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -304,
+        -352,
         -40,
         0,
         0,
@@ -196,7 +196,7 @@
   {
     "__type__": "cc.Node",
     "_name": "PlayButton",
-    "_objFlags": 0,
+    "_objFlags": 512,
     "_parent": {
       "__id__": 1
     },
@@ -264,7 +264,7 @@
   {
     "__type__": "cc.Node",
     "_name": "Background",
-    "_objFlags": 0,
+    "_objFlags": 512,
     "_parent": {
       "__id__": 5
     },
@@ -487,7 +487,7 @@
   {
     "__type__": "cc.Node",
     "_name": "EventNode",
-    "_objFlags": 0,
+    "_objFlags": 512,
     "_parent": {
       "__id__": 1
     },

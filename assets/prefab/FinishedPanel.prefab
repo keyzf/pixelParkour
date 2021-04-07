@@ -14,7 +14,7 @@
   {
     "__type__": "cc.Node",
     "_name": "FinishedPanel",
-    "_objFlags": 0,
+    "_objFlags": 512,
     "_parent": null,
     "_children": [
       {
@@ -89,7 +89,7 @@
   {
     "__type__": "cc.Node",
     "_name": "Over",
-    "_objFlags": 0,
+    "_objFlags": 512,
     "_parent": {
       "__id__": 1
     },
@@ -126,7 +126,7 @@
       "ctor": "Float64Array",
       "array": [
         0,
-        25,
+        20,
         0,
         0,
         0,
@@ -196,7 +196,7 @@
   {
     "__type__": "cc.Node",
     "_name": "PlayButton",
-    "_objFlags": 0,
+    "_objFlags": 512,
     "_parent": {
       "__id__": 1
     },
@@ -264,7 +264,7 @@
   {
     "__type__": "cc.Node",
     "_name": "Background",
-    "_objFlags": 0,
+    "_objFlags": 512,
     "_parent": {
       "__id__": 5
     },
@@ -487,7 +487,7 @@
   {
     "__type__": "cc.Node",
     "_name": "EventNode",
-    "_objFlags": 0,
+    "_objFlags": 512,
     "_parent": {
       "__id__": 1
     },

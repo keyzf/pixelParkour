@@ -66,8 +66,8 @@ cc.Class({
         monsterItem.getComponent("Monster").StartGame = this
 
         const x = this.generateMonsterItemX()
-        //减去 10  是因为玩家的骨骼动画上下有多余空白
-        const y = this.generateMonsterItemY() - 10
+        //减去多余空白  是因为玩家的骨骼动画上下有多余空白
+        const y = this.generateMonsterItemY() - 8
 
         monsterItem.setPosition(cc.v2(x, y))
         this.node.getChildByName(renderNodeName).addChild(monsterItem)
