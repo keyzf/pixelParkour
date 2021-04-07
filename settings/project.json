@@ -2,8 +2,8 @@
   "group-list": [
     "default",
     "scene",
-    "playPanel",
-    "finishedPanel",
+    "panel",
+    "....",
     "hero",
     "monster"
   ],

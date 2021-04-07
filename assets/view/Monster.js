@@ -14,6 +14,10 @@ cc.Class({
             if (this.getHeroDistance() <= this.getHeroBoundingBox().width * 0.76) {
                 this.stop()
                 this.StartGameController.stop()
+            } else {
+                if (!this._isCalculateScore && (this.getHeroLeftX() >= this.getMonsterLeftX())) {
+                    this.addScore()
+                }
             }
         }
     },
@@ -23,6 +27,14 @@ cc.Class({
     getMonsterBoundingBox() {
         return this.node.getBoundingBox()
     },
+    getHeroLeftX() {
+        const {center, width} = this.getHeroBoundingBox()
+        return center.x - (width / 2)
+    },
+    getMonsterLeftX() {
+        const {center, width} = this.getMonsterBoundingBox()
+        return center.x + (width / 2)
+    },
     getHeroDistance() {
         //一般来说应该是统一 origin  或者 center
         //但是因为这个骨骼动画是一个竖着的长方形 所以左右跟上下的中心不一样  这里需要做调整
@@ -30,6 +42,10 @@ cc.Class({
         const heroPos = new cc.Vec2(this.getHeroBoundingBox().center.x, this.getHeroBoundingBox().origin.y)
         let mag = parseInt(nodePos.sub(new cc.Vec2(heroPos.x, heroPos.y)).mag())
         return Math.abs(mag)
+    },
+    addScore() {
+        this._isCalculateScore = true
+        this.StartGameController.addScore()
     },
     saveDragonBones() {
         this._dragonBones = this.getComponent(dragonBones.ArmatureDisplay)
@@ -48,6 +64,8 @@ cc.Class({
         this._isStopped = false
         //当前骨骼对象
         this._dragonBones = null
+        //是否已经计算得分
+        this._isCalculateScore = false
     },
     onLoad() {
         this.initProperty()
