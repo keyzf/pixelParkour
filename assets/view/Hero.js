@@ -15,11 +15,17 @@ cc.Class({
         //最大跳跃高度
         maxJumpHeight: 200,
     },
+    playJump() {
+        this.getComponent("SoundControl").play(this._jumpAudioPathAudioClip)
+    },
+    playFall() {
+        this.getComponent("SoundControl").play(this._fallAudioPathAudioClip)
+    },
     jump() {
         if (this._isStopped) return
         this.isPressKeyUp = false
-        const up = cc.tween().to(this.jumpDurationOff, {y: this.maxJumpHeight}, {easing: "sineOut"})
-        const down = cc.tween().to(this.jumpDurationPress, {y: this._nodeInitPosition.y}, {easing: "sineIn"})
+        const up = cc.tween().to(this.jumpDurationOff, {y: this.maxJumpHeight}, {easing: "sineOut"}).call(this.playJump.bind(this))
+        const down = cc.tween().to(this.jumpDurationPress, {y: this._nodeInitPosition.y}, {easing: "sineIn"}).call(this.playFall.bind(this))
         cc.tween(this.node)
             .sequence(up, down)
             .call(() => {
@@ -62,6 +68,16 @@ cc.Class({
     onDestroy() {
         this.removeEventListener()
     },
+    loadAudioClip() {
+        const jumpAudioPath = "audio/jump"
+        const fallAudioPath = "audio/fall"
+        cc.resources.load(jumpAudioPath, cc.AudioClip, (v, audioClip) => {
+            this._jumpAudioPathAudioClip = audioClip
+        })
+        cc.resources.load(fallAudioPath, cc.AudioClip, (v, audioClip) => {
+            this._fallAudioPathAudioClip = audioClip
+        })
+    },
     initProperty() {
         //是否松开了上键 防止重复触发缓动效果
         this.isPressKeyUp = true
@@ -71,10 +87,14 @@ cc.Class({
         this._isStopped = true
         //当前骨骼对象
         this._dragonBones = null
+        //跳跃音效
+        this._jumpAudioPathAudioClip = null
+        this._fallAudioPathAudioClip = null
     },
     onLoad() {
         this.initProperty()
         this.saveDragonBones()
         this.saveInitPosition()
+        this.loadAudioClip()
     }
 });
