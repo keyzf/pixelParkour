@@ -1269,9 +1269,9 @@
     },
     "_enabled": true,
     "audioClip": {
-      "__uuid__": "537592c0-4634-4261-a1ad-bcd73a022650"
+      "__uuid__": "bb4d48ce-a380-4994-86ca-c9d5467b106d"
     },
-    "volume": 1,
+    "volume": 0.4,
     "isLoop": true,
     "isOnLoadPlay": false,
     "_id": "c7flJjjv1PI4fksH+S7ggL"
