@@ -61,9 +61,9 @@ cc.Class({
     generateMonsterItem(progressCallback) {
         const renderNodeName = "PanelNode"
         const monsterItem = new cc.instantiate(this.monsterPrefab)
-        //Monster组件添加StartGame引用
+        //Monster组件添加StartGameController引用
         //给Monster调用stop方法
-        monsterItem.getComponent("Monster").StartGame = this
+        monsterItem.getComponent("Monster").StartGameController = this
 
         const x = this.generateMonsterItemX()
         //减去多余空白  是因为玩家的骨骼动画上下有多余空白

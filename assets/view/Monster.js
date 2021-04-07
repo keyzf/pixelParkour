@@ -13,12 +13,12 @@ cc.Class({
             //对骨骼动画周边多余的空白区域做出修正
             if (this.getHeroDistance() <= this.getHeroBoundingBox().width * 0.76) {
                 this.stop()
-                this.StartGame.stop()
+                this.StartGameController.stop()
             }
         }
     },
     getHeroBoundingBox() {
-        return this.StartGame.hero.getBoundingBox()
+        return this.StartGameController.hero.getBoundingBox()
     },
     getMonsterBoundingBox() {
         return this.node.getBoundingBox()

@@ -16,7 +16,7 @@ cc.Class({
         const rootNodePath = `RootNode`
         const panelNodePath = `${rootNodePath}/PanelNode`
         cc.find(`${panelNodePath}/PlayPanel`).destroy();
-        cc.find(`${rootNodePath}`).getComponent("StartGame").run()
+        cc.find(`${rootNodePath}`).getComponent("StartGameController").run()
     },
     loadAudioClip() {
         const path = "audio/click"
