@@ -49,19 +49,12 @@ cc.Class({
     },
     run() {
         this._isStopped = false
-        this.addEventListener()
-        this.saveDragonBones()
-        this.saveInitPosition()
-        this._dragonBones.timeScale = 1
-    },
-    resume() {
-        this._isStopped = false
         this.node.resumeAllActions()
+        this.addEventListener()
         this._dragonBones.timeScale = 1
     },
     stop() {
         this._isStopped = true
-        this.node.stopAllActions()
         //dragonBones没有暂停方法  所以通过timeScale 将播放速度改为0  实现暂停
         this._dragonBones.timeScale = 0
         this.removeEventListener()
@@ -83,8 +76,5 @@ cc.Class({
         this.initProperty()
         this.saveDragonBones()
         this.saveInitPosition()
-        if (this._isStopped) {
-            this.stop()
-        }
     }
 });

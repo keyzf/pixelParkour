@@ -28,11 +28,6 @@ cc.Class({
             type: cc.Node,
             default: null
         },
-        //场景切换摄像机
-        unlimitedScenesCamera: {
-            type: cc.Camera,
-            default: null
-        },
         //一次生成怪物的个数
         generateMonsterItemCount: 2
     },
@@ -146,18 +141,15 @@ cc.Class({
     },
     run() {
         this.initProperty()
-        this.saveHeroPosition()
         this.generateMonsterController()
         this.hero.getComponent("Hero").run()
         this._audioId = this.getComponent("SoundControl").run()
-        // this.unlimitedScenesCamera.getComponent("UnlimitedScenesCamera").run()
     },
     stop() {
         this._isStopped = true
         this.node.stopAllActions()
         this.hero.getComponent("Hero").stop()
         this.getComponent("SoundControl").stopAudio(this._audioId)
-        // this.unlimitedScenesCamera.getComponent("UnlimitedScenesCamera").stop()
         this.removeAllMonster()
         this.showFinishedPanel()
     },
