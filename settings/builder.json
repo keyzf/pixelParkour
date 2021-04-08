@@ -17,8 +17,8 @@
   "optimizeHotUpdate": false,
   "md5Cache": true,
   "nativeMd5Cache": true,
-  "encryptJs": false,
-  "xxteaKey": "e58ae1a2-e5a8-47",
+  "encryptJs": true,
+  "xxteaKey": "vfawnuMPjWvhNVTh",
   "zipCompressJs": true,
   "fb-instant-games": {},
   "android": {
@@ -49,6 +49,6 @@
     "scheme": "https",
     "skipRecord": false
   },
-  "appBundle": false,
+  "appBundle": true,
   "includeSDKBox": false
 }

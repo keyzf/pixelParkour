@@ -1,7 +1,7 @@
 {
   "platform": "android",
-  "actualPlatform": "huawei-agc",
-  "template": "default",
+  "actualPlatform": "android",
+  "template": "link",
   "buildPath": "./build",
   "debug": false,
   "sourceMaps": false,
@@ -13,7 +13,7 @@
   "keystorePassword": "",
   "keystoreAlias": "",
   "keystoreAliasPassword": "",
-  "apiLevel": "android-24",
+  "apiLevel": "android-26",
   "appABIs": [],
   "vsVersion": "auto",
   "buildScriptsOnly": false

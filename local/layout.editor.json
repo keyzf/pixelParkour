@@ -43,7 +43,7 @@
                 "children": [
                   "scene"
                 ],
-                "height": 582.984375,
+                "height": 356,
                 "type": "panel",
                 "width": 874
               },
@@ -54,7 +54,7 @@
                   "timeline",
                   "game-window"
                 ],
-                "height": 267,
+                "height": 494,
                 "type": "panel",
                 "width": 874
               }
@@ -85,7 +85,8 @@
         "inspector"
       ]
     },
-    "worker": {}
+    "worker": {},
+    "window-1617905023028": {}
   },
   "panels": {
     "preferences": {
