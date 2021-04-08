@@ -110,6 +110,12 @@
       "y": 156,
       "width": 900,
       "height": 628
+    },
+    "channel-upload-tools": {
+      "x": 580,
+      "y": 256,
+      "width": 524,
+      "height": 454
     }
   },
   "panelLabelWidth": {
