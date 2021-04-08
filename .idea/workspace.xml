@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1aee79f1-3a34-4f6e-98bd-af543e77bd5a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pixelParkour.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pixelParkour.iml" afterDir="false" />
+    <list default="true" id="1aee79f1-3a34-4f6e-98bd-af543e77bd5a" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets.fire" beforeDir="false" afterPath="$PROJECT_DIR$/assets/assets.fire" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local/builder.json" beforeDir="false" afterPath="$PROJECT_DIR$/local/builder.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-link/frameworks/runtime-src/proj.android-studio/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/jsb-link/frameworks/runtime-src/proj.android-studio/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/local/layout.editor.json" beforeDir="false" afterPath="$PROJECT_DIR$/local/layout.editor.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/local/node-tree-state.json" beforeDir="false" afterPath="$PROJECT_DIR$/local/node-tree-state.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/builder.json" beforeDir="false" afterPath="$PROJECT_DIR$/settings/builder.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +35,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/build/jsb-link/frameworks/runtime-src/proj.android-studio/res/values/values-zh-rCN" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -47,6 +44,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/build/jsb-link/frameworks/runtime-src/proj.android-studio/res/values/values-zh-rCN" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/appIcons" />
     </key>
@@ -71,7 +71,7 @@
       <workItem from="1617895198665" duration="251000" />
       <workItem from="1617901290116" duration="172000" />
       <workItem from="1617901491151" duration="740000" />
-      <workItem from="1617903619979" duration="585000" />
+      <workItem from="1617903619979" duration="1062000" />
     </task>
     <task id="LOCAL-00001" summary="跟新">
       <created>1617786888150</created>
@@ -199,7 +199,21 @@
       <option name="project" value="LOCAL" />
       <updated>1617901523337</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="update">
+      <created>1617905112669</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1617905112669</updated>
+    </task>
+    <task id="LOCAL-00020" summary="update">
+      <created>1617905315644</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1617905315644</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
