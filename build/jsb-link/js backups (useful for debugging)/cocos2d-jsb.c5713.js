@@ -4891,7 +4891,7 @@ return 1;
 }
 p = this.literalTree.length;
 for (i = 0; i < p; i++) this.distanceTree[i] = new n.HufNode();
-var d = [];
+var d = new Array();
 for (i = l; i < _.length; i++) d[i - l] = _[i];
 if (this.CreateTree(this.distanceTree, u, d, 0)) {
 this.flushBuffer();
@@ -7247,14 +7247,14 @@ configurable: !0,
 enumerable: !0,
 writable: !0,
 initializer: function() {
-return [];
+return new Array();
 }
 }), v = w(m.prototype, "alphaKeys", [ f ], {
 configurable: !0,
 enumerable: !0,
 writable: !0,
 initializer: function() {
-return [];
+return new Array();
 }
 }), g = w(m.prototype, "mode", [ d ], {
 configurable: !0,
@@ -8415,7 +8415,7 @@ configurable: !0,
 enumerable: !0,
 writable: !0,
 initializer: function() {
-return [];
+return new Array();
 }
 }), m = x(d.prototype, "preWrapMode", [ h ], {
 configurable: !0,
@@ -8492,7 +8492,7 @@ s = null;
 }
 return s;
 }
-var F = new D.Vec3(0, 0, 0), z = [], k = new D.Vec3(.5, .5, .5), G = (n = (0, 
+var F = new D.Vec3(0, 0, 0), z = new Array(), k = new D.Vec3(.5, .5, .5), G = (n = (0, 
 B.ccclass)("cc.ShapeModule"), r = (0, B.property)({
 type: R.ShapeType
 }), s = (0, B.property)({
@@ -9827,7 +9827,7 @@ configurable: !0,
 enumerable: !0,
 writable: !0,
 initializer: function() {
-return [];
+return new Array();
 }
 }), Ht(N.prototype, "materials", [ b ], Object.getOwnPropertyDescriptor(N.prototype, "materials"), N.prototype), 
 it = Ht(N.prototype, "_shapeModule", [ Xt ], {

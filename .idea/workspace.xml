@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1aee79f1-3a34-4f6e-98bd-af543e77bd5a" name="Default Changelist" comment="跟新">
-      <change afterPath="$PROJECT_DIR$/settings/huawei-agc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets.fire" beforeDir="false" afterPath="$PROJECT_DIR$/assets/assets.fire" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local/builder.json" beforeDir="false" afterPath="$PROJECT_DIR$/local/builder.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/local/layout.editor.json" beforeDir="false" afterPath="$PROJECT_DIR$/local/layout.editor.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/builder.json" beforeDir="false" afterPath="$PROJECT_DIR$/settings/builder.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +52,9 @@
       <workItem from="1617786290251" duration="25000" />
       <workItem from="1617786325241" duration="8383000" />
       <workItem from="1617795075629" duration="6174000" />
-      <workItem from="1617806786540" duration="1232000" />
+      <workItem from="1617806786540" duration="1676000" />
+      <workItem from="1617820549014" duration="246000" />
+      <workItem from="1617874628380" duration="593000" />
     </task>
     <task id="LOCAL-00001" summary="跟新">
       <created>1617786888150</created>
@@ -150,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617807206958</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="跟新">
+      <created>1617820205672</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1617820205672</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +173,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="跟新" />
     <option name="LAST_COMMIT_MESSAGE" value="跟新" />

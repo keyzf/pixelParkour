@@ -2352,7 +2352,7 @@ jsb.generateGetSet = function (moduleObj) {
     for (var getName in classProto) {
       var _ret = _loop(getName);
 
-      if (_ret === "continue")
+      if (_ret === "continue") continue;
     }
   }
 }; // promise polyfill relies on setTimeout implementation
@@ -2843,12 +2843,12 @@ function isObject(x) {
 }
 /**
  * EventTarget.
- *
+ * 
  * - This is constructor if no arguments.
  * - This is a function which returns a CustomEventTarget constructor if there are arguments.
- *
+ * 
  * For example:
- *
+ * 
  *     class A extends EventTarget {}
  */
 
@@ -5243,7 +5243,7 @@ jsb.inputBox = {
    * @param {bool}        options.confirmHold
    * @param {string}      options.confirmType
    * @param {string}      options.inputType
-   *
+   * 
    * Values of options.confirmType can be [done|next|search|go|send].
    * Values of options.inputType can be [text|email|number|phone|password].
    */
@@ -6521,17 +6521,17 @@ exports.enums = void 0;
  Copyright (c) 2018 Xiamen Yaji Software Co., Ltd.
 
  http://www.cocos.com
-
+ 
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
  in the Software without restriction, including without limitation the rights
  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  copies of the Software, and to permit persons to whom the Software is
  furnished to do so, subject to the following conditions:
-
+ 
  The above copyright notice and this permission notice shall be included in
  all copies or substantial portions of the Software.
-
+ 
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -7063,17 +7063,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
  Copyright (c) 2018 Xiamen Yaji Software Co., Ltd.
 
   http://www.cocos.com
-
+ 
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
  in the Software without restriction, including without limitation the rights
  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  copies of the Software, and to permit persons to whom the Software is
  furnished to do so, subject to the following conditions:
-
+ 
  The above copyright notice and this permission notice shall be included in
  all copies or substantial portions of the Software.
-
+ 
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -7324,17 +7324,17 @@ exports["default"] = void 0;
  Copyright (c) 2018 Xiamen Yaji Software Co., Ltd.
 
  http://www.cocos.com
-
+ 
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
  in the Software without restriction, including without limitation the rights
  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  copies of the Software, and to permit persons to whom the Software is
  furnished to do so, subject to the following conditions:
-
+ 
  The above copyright notice and this permission notice shall be included in
  all copies or substantial portions of the Software.
-
+ 
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -7654,8 +7654,8 @@ function buildErrorHandler(errorImpl, domBuilder, locator) {
 /**
  * +ContentHandler+ErrorHandler
  * +LexicalHandler+EntityResolver2
- * -DeclHandler-DTDHandler
- *
+ * -DeclHandler-DTDHandler 
+ * 
  * DefaultHandler:EntityResolver, DTDHandler, ContentHandler, ErrorHandler
  * DefaultHandler2:DefaultHandler,LexicalHandler, DeclHandler, EntityResolver2
  * @link http://www.saxproject.org/apidoc/org/xml/sax/helpers/DefaultHandler.html
@@ -7889,7 +7889,7 @@ function _extends(Class, Super) {
   if (!(pt instanceof Super)) {
     var t = function t() {};
 
-
+    ;
     t.prototype = Super.prototype;
     t = new t();
     copy(pt, t);
@@ -7955,7 +7955,7 @@ function DOMException(code, message) {
   return error;
 }
 
-
+;
 DOMException.prototype = Error.prototype;
 copy(ExceptionCode, DOMException);
 /**
@@ -7966,7 +7966,7 @@ copy(ExceptionCode, DOMException);
 
 function NodeList() {}
 
-
+;
 NodeList.prototype = {
   /**
    * The number of nodes in the list. The range of valid child node indices is 0 to length-1 inclusive.
@@ -7977,10 +7977,10 @@ NodeList.prototype = {
   /**
    * Returns the indexth item in the collection. If index is greater than or equal to the number of nodes in the list, this returns null.
    * @standard level1
-   * @param index  unsigned long
+   * @param index  unsigned long 
    *   Index into the collection.
    * @return Node
-   * 	The node at the indexth position in the NodeList, or null if that is not a valid index.
+   * 	The node at the indexth position in the NodeList, or null if that is not a valid index. 
    */
   item: function item(index) {
     return this[index] || null;
@@ -8023,16 +8023,16 @@ LiveNodeList.prototype.item = function (i) {
 
 _extends(LiveNodeList, NodeList);
 /**
- *
+ * 
  * Objects implementing the NamedNodeMap interface are used to represent collections of nodes that can be accessed by name. Note that NamedNodeMap does not inherit from NodeList; NamedNodeMaps are not maintained in any particular order. Objects contained in an object implementing NamedNodeMap may also be accessed by an ordinal index, but this is simply to allow convenient enumeration of the contents of a NamedNodeMap, and does not imply that the DOM specifies an order to these Nodes.
  * NamedNodeMap objects in the DOM are live.
- * used for attributes or DocumentType entities
+ * used for attributes or DocumentType entities 
  */
 
 
 function NamedNodeMap() {}
 
-
+;
 
 function _findNodeIndex(list, node) {
   var i = list.length;
@@ -8186,7 +8186,7 @@ features) {
   }
 }
 
-
+;
 DOMImplementation.prototype = {
   hasFeature: function hasFeature(
   /* string */
@@ -8242,7 +8242,7 @@ DOMImplementation.prototype = {
 
 function Node() {}
 
-
+;
 Node.prototype = {
   firstChild: null,
   lastChild: null,
@@ -8258,11 +8258,11 @@ Node.prototype = {
   localName: null,
   // Modified in DOM Level 2:
   insertBefore: function insertBefore(newChild, refChild) {
-    //raises
+    //raises 
     return _insertBefore(this, newChild, refChild);
   },
   replaceChild: function replaceChild(newChild, oldChild) {
-    //raises
+    //raises 
     this.insertBefore(newChild, oldChild);
 
     if (oldChild) {
@@ -8421,7 +8421,7 @@ function _onUpdateChild(doc, el, newChild) {
 /**
  * attributes;
  * children;
- *
+ * 
  * writeable properties:
  * nodeValue,Attr:value,CharacterData:data
  * prefix
@@ -8538,7 +8538,7 @@ Document.prototype = {
   documentElement: null,
   _inc: 1,
   insertBefore: function insertBefore(newChild, refChild) {
-    //raises
+    //raises 
     if (newChild.nodeType == DOCUMENT_FRAGMENT_NODE) {
       var child = newChild.firstChild;
 
@@ -8690,7 +8690,7 @@ function Element() {
   this._nsMap = {};
 }
 
-
+;
 Element.prototype = {
   nodeType: ELEMENT_NODE,
   hasAttribute: function hasAttribute(name) {
@@ -8784,14 +8784,14 @@ _extends(Element, Node);
 
 function Attr() {}
 
-
+;
 Attr.prototype.nodeType = ATTRIBUTE_NODE;
 
 _extends(Attr, Node);
 
 function CharacterData() {}
 
-
+;
 CharacterData.prototype = {
   data: '',
   substringData: function substringData(offset, count) {
@@ -8824,7 +8824,7 @@ _extends(CharacterData, Node);
 
 function Text() {}
 
-
+;
 Text.prototype = {
   nodeName: "#text",
   nodeType: TEXT_NODE,
@@ -8848,7 +8848,7 @@ _extends(Text, CharacterData);
 
 function Comment() {}
 
-
+;
 Comment.prototype = {
   nodeName: "#comment",
   nodeType: COMMENT_NODE
@@ -8858,7 +8858,7 @@ _extends(Comment, CharacterData);
 
 function CDATASection() {}
 
-
+;
 CDATASection.prototype = {
   nodeName: "#cdata-section",
   nodeType: CDATA_SECTION_NODE
@@ -8868,35 +8868,35 @@ _extends(CDATASection, CharacterData);
 
 function DocumentType() {}
 
-
+;
 DocumentType.prototype.nodeType = DOCUMENT_TYPE_NODE;
 
 _extends(DocumentType, Node);
 
 function Notation() {}
 
-
+;
 Notation.prototype.nodeType = NOTATION_NODE;
 
 _extends(Notation, Node);
 
 function Entity() {}
 
-
+;
 Entity.prototype.nodeType = ENTITY_NODE;
 
 _extends(Entity, Node);
 
 function EntityReference() {}
 
-
+;
 EntityReference.prototype.nodeType = ENTITY_REFERENCE_NODE;
 
 _extends(EntityReference, Node);
 
 function DocumentFragment() {}
 
-
+;
 DocumentFragment.prototype.nodeName = "#document-fragment";
 DocumentFragment.prototype.nodeType = DOCUMENT_FRAGMENT_NODE;
 
@@ -9031,7 +9031,7 @@ function serializeToString(node, buf, isHTML, nodeFilter, visibleNamespaces) {
         }
 
         serializeToString(attr, buf, isHTML, nodeFilter, visibleNamespaces);
-      } // add namespace for current node
+      } // add namespace for current node		
 
 
       if (needNamespaceDefine(node, isHTML, visibleNamespaces)) {
@@ -9225,7 +9225,7 @@ function _cloneNode(doc, node, deep) {
       }
 
       break;
-
+      ;
 
     case ATTRIBUTE_NODE:
       deep = true;
@@ -9581,7 +9581,7 @@ var tagNamePattern = new RegExp('^' + nameStartChar.source + nameChar.source + '
 
 var S_TAG = 0; //tag name offerring
 
-var S_ATTR = 1; //attr name offerring
+var S_ATTR = 1; //attr name offerring 
 
 var S_ATTR_SPACE = 2; //attr name end and space offer
 
@@ -10061,7 +10061,7 @@ function appendElement(el, domBuilder, currentNSMap) {
     } //can not set prefix,because prefix !== ''
 
 
-    a.localName = localName; //prefix == null for no ns prefix attribute
+    a.localName = localName; //prefix == null for no ns prefix attribute 
 
     if (nsPrefix !== false) {
       //hack!!
@@ -10168,7 +10168,7 @@ function fixSelfClosed(source, elStartEnd, tagName, closeMap) {
     closeMap[tagName] = pos;
   }
 
-  return pos < elStartEnd; //}
+  return pos < elStartEnd; //} 
 }
 
 function _copy(source, target) {
@@ -10206,7 +10206,7 @@ function parseDCC(source, start, domBuilder, errorHandler) {
         domBuilder.endCDATA();
         return end + 3;
       } //<!DOCTYPE
-      //startDTD(java.lang.String name, java.lang.String publicId, java.lang.String systemId)
+      //startDTD(java.lang.String name, java.lang.String publicId, java.lang.String systemId) 
 
 
       var matchs = split(source, start);
@@ -10288,7 +10288,7 @@ ElementAttributes.prototype = {
     return this[i].value;
   } //	,getIndex:function(uri, localName)){
   //		if(localName){
-  //
+  //			
   //		}else{
   //			var qName = uri
   //		}

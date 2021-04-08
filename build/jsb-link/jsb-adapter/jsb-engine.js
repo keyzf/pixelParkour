@@ -2075,7 +2075,7 @@ var _constants = require("constants");
   dbAtlas.updateTextureAtlasData = function (factory) {
     var url = this._texture.url;
     var preAtlasInfo = _textureIdx2Name[url];
-    var index; // If the texture has store the atlas info before,then get native atlas object,and
+    var index; // If the texture has store the atlas info before,then get native atlas object,and 
     // update script texture map.
 
     if (preAtlasInfo) {
@@ -3479,7 +3479,7 @@ function downloadBundle(nameOrUrl, options, onComplete) {
   });
 }
 
-
+;
 
 function loadFont(url, options, onComplete) {
   var fontFamilyName = _getFontFamily(url);
@@ -5519,7 +5519,7 @@ sys.getSafeAreaRect = function () {
  Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
 
  https://www.cocos.com/
-
+ 
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated engine source code (the "Software"), a limited,
  worldwide, royalty-free, non-assignable, revocable and non-exclusive license
