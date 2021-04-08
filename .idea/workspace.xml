@@ -1,30 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1aee79f1-3a34-4f6e-98bd-af543e77bd5a" name="Default Changelist" comment="跟新">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jsb-default/frameworks/runtime-src/proj.android-studio/app/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/jsb-default/frameworks/runtime-src/proj.android-studio/app/project.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jsb-default/frameworks/runtime-src/proj.android-studio/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/jsb-default/frameworks/runtime-src/proj.android-studio/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jsb-default/jsb-adapter/jsb-builtin.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/jsb-default/jsb-adapter/jsb-builtin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jsb-default/jsb-adapter/jsb-engine.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/jsb-default/jsb-adapter/jsb-engine.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jsb-default/src/cocos2d-jsb.c5713.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/jsb-default/src/cocos2d-jsb.c5713.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jsb-link/assets/internal/config.09c80.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jsb-link/assets/internal/index.09c80.jsc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jsb-link/assets/main/config.1be92.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jsb-link/assets/main/index.1be92.jsc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jsb-link/assets/resources/config.2c136.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jsb-link/assets/resources/index.2c136.jsc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jsb-link/frameworks/runtime-src/proj.android-studio/app/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/jsb-link/frameworks/runtime-src/proj.android-studio/app/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jsb-link/frameworks/runtime-src/proj.android-studio/app/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/jsb-link/frameworks/runtime-src/proj.android-studio/app/project.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jsb-link/frameworks/runtime-src/proj.android-studio/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/jsb-link/frameworks/runtime-src/proj.android-studio/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jsb-link/src/cocos2d-jsb.c5713.jsc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jsb-link/src/physics.37b5c.jsc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jsb-link/src/settings.5f3b0.jsc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/local/builder.json" beforeDir="false" afterPath="$PROJECT_DIR$/local/builder.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local/layout.editor.json" beforeDir="false" afterPath="$PROJECT_DIR$/local/layout.editor.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/builder.json" beforeDir="false" afterPath="$PROJECT_DIR$/settings/builder.json" afterDir="false" />
-    </list>
+    <list default="true" id="1aee79f1-3a34-4f6e-98bd-af543e77bd5a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,7 +55,7 @@
       <workItem from="1617880000585" duration="57000" />
       <workItem from="1617880197540" duration="64000" />
       <workItem from="1617895198665" duration="251000" />
-      <workItem from="1617901290116" duration="63000" />
+      <workItem from="1617901290116" duration="172000" />
     </task>
     <task id="LOCAL-00001" summary="跟新">
       <created>1617786888150</created>
@@ -185,7 +162,21 @@
       <option name="project" value="LOCAL" />
       <updated>1617878771668</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="update">
+      <created>1617901396820</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1617901396820</updated>
+    </task>
+    <task id="LOCAL-00017" summary="update">
+      <created>1617901454249</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1617901454249</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +200,7 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="跟新" />
-    <option name="LAST_COMMIT_MESSAGE" value="跟新" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
