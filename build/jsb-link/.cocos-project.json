@@ -3,5 +3,5 @@
   "has_native": true,
   "project_type": "js",
   "projectName": "pixelParkour",
-  "packageName": "org.wanland.game.pixelparkour"
+  "packageName": "org.wanland.game.pixelparkour.n"
 }

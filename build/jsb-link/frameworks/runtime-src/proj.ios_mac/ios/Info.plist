@@ -11,7 +11,7 @@
     <key>CFBundleIcons~ipad</key>
     <dict/>
     <key>CFBundleIdentifier</key>
-    <string>org.wanland.game.pixelparkour</string>
+    <string>org.wanland.game.pixelparkour.n</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundleName</key>

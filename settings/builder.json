@@ -23,7 +23,7 @@
   "fb-instant-games": {},
   "android": {
     "REMOTE_SERVER_ROOT": "",
-    "packageName": "org.wanland.game.pixelparkour"
+    "packageName": "org.wanland.game.pixelparkour.n"
   },
   "ios": {
     "REMOTE_SERVER_ROOT": "",
