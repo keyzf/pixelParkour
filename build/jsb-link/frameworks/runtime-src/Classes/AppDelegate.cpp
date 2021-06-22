@@ -47,7 +47,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 {
     se::ScriptEngine *se = se::ScriptEngine::getInstance();
     
-    jsb_set_xxtea_key("vfawnuMPjWvhNVTh");
+    jsb_set_xxtea_key("");
     jsb_init_file_operation_delegate();
     
 #if defined(COCOS2D_DEBUG) && (COCOS2D_DEBUG > 0)
@@ -57,6 +57,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     
     se->setExceptionCallback([](const char *location, const char *message, const char *stack) {
         // Send exception information to server like Tencent Bugly.
+        cocos2d::log("\nUncaught Exception:\n - location :  %s\n - msg : %s\n - detail : \n      %s\n", location, message, stack);
     });
     
     jsb_register_all_modules();

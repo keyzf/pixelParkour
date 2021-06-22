@@ -19,7 +19,7 @@
             "children": [
               {
                 "width": 269,
-                "height": 404.953125,
+                "height": 405,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -28,7 +28,7 @@
               },
               {
                 "width": 269,
-                "height": 447.046875,
+                "height": 447,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -45,7 +45,7 @@
             "children": [
               {
                 "width": 637,
-                "height": 356.84375,
+                "height": 357,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -54,7 +54,7 @@
               },
               {
                 "width": 637,
-                "height": 495.15625,
+                "height": 495,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -86,8 +86,7 @@
         "game-window",
         "inspector"
       ]
-    },
-    "worker": {}
+    }
   },
   "panels": {
     "preferences": {
@@ -119,6 +118,12 @@
       "y": 256,
       "width": 524,
       "height": 454
+    },
+    "huawei-runtime": {
+      "x": 580,
+      "y": 231,
+      "width": 524,
+      "height": 504
     }
   },
   "panelLabelWidth": {

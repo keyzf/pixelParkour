@@ -10,7 +10,7 @@ APP_PLATFORM=android-16
 NDK_OUT=/Users/rockey/pixelParkour/build/jsb-link/frameworks/runtime-src/proj.android-studio/game/build/intermediates/ndkBuild/feature/release/obj
 NDK_LIBS_OUT=/Users/rockey/pixelParkour/build/jsb-link/frameworks/runtime-src/proj.android-studio/game/build/intermediates/ndkBuild/feature/release/lib
 NDK_TOOLCHAIN_VERSION=clang
-NDK_MODULE_PATH=/Applications/CocosCreator/Creator/2.4.2/CocosCreator.app/Contents/Resources/cocos2d-x:/Applications/CocosCreator/Creator/2.4.2/CocosCreator.app/Contents/Resources/cocos2d-x/cocos:/Applications/CocosCreator/Creator/2.4.2/CocosCreator.app/Contents/Resources/cocos2d-x/external
+NDK_MODULE_PATH=/Applications/CocosCreator/Creator/2.4.5/CocosCreator.app/Contents/Resources/cocos2d-x:/Applications/CocosCreator/Creator/2.4.5/CocosCreator.app/Contents/Resources/cocos2d-x/cocos:/Applications/CocosCreator/Creator/2.4.5/CocosCreator.app/Contents/Resources/cocos2d-x/external
 -j12
 NDK_DEBUG=0
 APP_SHORT_COMMANDS=false
