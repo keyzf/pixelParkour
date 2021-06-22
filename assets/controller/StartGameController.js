@@ -35,7 +35,7 @@ cc.Class({
             default: null
         },
         //每秒速度加快多少
-        secondIncreaseSpacing: 0.05
+        secondIncreaseSpacing: 0.05,
     },
     //英雄宽度
     getHeroWidth() {

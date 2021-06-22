@@ -10,7 +10,7 @@
     "upsideDown": false
   },
   "webOrientation": "landscape",
-  "inlineSpriteFrames": true,
+  "inlineSpriteFrames": false,
   "inlineSpriteFrames_native": true,
   "mainCompressionType": "default",
   "mainIsRemote": false,
@@ -27,7 +27,8 @@
   },
   "ios": {
     "REMOTE_SERVER_ROOT": "",
-    "packageName": "org.cocos2d.demo"
+    "packageName": "org.cocos2d.demo",
+    "ios_enable_jit": true
   },
   "mac": {
     "REMOTE_SERVER_ROOT": "",
@@ -50,5 +51,6 @@
     "skipRecord": false
   },
   "appBundle": true,
-  "includeSDKBox": false
+  "includeSDKBox": false,
+  "agreements": {}
 }

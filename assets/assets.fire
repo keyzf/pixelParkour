@@ -1176,7 +1176,6 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_useOriginalSize": false,
     "_string": "SCORE: 0",
     "_N$string": "SCORE: 0",
     "_fontSize": 20,
@@ -1214,7 +1213,7 @@
     },
     "_enabled": true,
     "audioClip": {
-      "__uuid__": "67d55546-1c73-4883-a3d9-8d0ff09d0f5a"
+      "__uuid__": "c2178649-5bf2-48e5-9be8-1bd1820c244d"
     },
     "volume": 1.3,
     "isLoop": false,
@@ -1269,11 +1268,11 @@
     },
     "_enabled": true,
     "audioClip": {
-      "__uuid__": "bb4d48ce-a380-4994-86ca-c9d5467b106d"
+      "__uuid__": "aed18066-855f-41d6-88c4-962ef8945b99"
     },
     "volume": 0.3,
     "isLoop": true,
     "isOnLoadPlay": false,
-    "_id": "c7flJjjv1PI4fksH+S7ggL"
+    "_id": "9dPJKpeRNHb5FzAIQwprpt"
   }
 ]
