@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0a9806d-f764-464e-9f04-2dc1aff9b984" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/assets/resources/audio/scene.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/resources/audio/scene.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/resources/audio/score.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/resources/audio/score.mp3.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets.fire" beforeDir="false" afterPath="$PROJECT_DIR$/assets/assets.fire" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/controller/StartGameController.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/controller/StartGameController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/resources/audio/scene.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/resources/audio/scene.ogg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/resources/audio/score.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/resources/audio/score.ogg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/local/builder.json" beforeDir="false" afterPath="$PROJECT_DIR$/local/builder.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/builder.json" beforeDir="false" afterPath="$PROJECT_DIR$/settings/builder.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/project.json" beforeDir="false" afterPath="$PROJECT_DIR$/settings/project.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/resources/audio/scene.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/assets/resources/audio/scene.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/layout.editor.json" beforeDir="false" afterPath="$PROJECT_DIR$/local/layout.editor.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +73,7 @@
       <workItem from="1618405397180" duration="165000" />
       <workItem from="1620231628263" duration="3000" />
       <workItem from="1624323480691" duration="7000" />
-      <workItem from="1624323502957" duration="3431000" />
+      <workItem from="1624323502957" duration="4329000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1617907518439</created>
@@ -142,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624324375896</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update">
+      <created>1624327465218</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1624327465218</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
