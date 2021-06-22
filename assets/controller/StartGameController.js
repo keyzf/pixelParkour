@@ -65,7 +65,7 @@ cc.Class({
     },
     generateMonsterMoveSpeed() {
         //最小时间间隔
-        const minSpeedSpacing = 2
+        const minSpeedSpacing = 2.5
         //最大时间间隔
         const maxSpeedSpacing = 4.5
         let n = parseFloat(this._roundRuntimeInterval * this.secondIncreaseSpacing).toFixed(2)
@@ -88,6 +88,7 @@ cc.Class({
 
         monsterItem.setPosition(cc.v2(x, y))
         this.node.getChildByName(renderNodeName).addChild(monsterItem)
+
         return {
             monsterItem,
             tween: cc.tween(monsterItem)
