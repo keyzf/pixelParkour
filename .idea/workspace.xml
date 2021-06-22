@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0a9806d-f764-464e-9f04-2dc1aff9b984" name="Default Changelist" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/controller/StartGameController.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/controller/StartGameController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/assets.fire.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/assets.fire.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/prefab/FinishedPanel.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/prefab/FinishedPanel.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/prefab/Monster.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/prefab/Monster.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/prefab/PlayPanel.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/assets/prefab/PlayPanel.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/local/layout.editor.json" beforeDir="false" afterPath="$PROJECT_DIR$/local/layout.editor.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/project.json" beforeDir="false" afterPath="$PROJECT_DIR$/settings/project.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +77,7 @@
       <workItem from="1618405397180" duration="165000" />
       <workItem from="1620231628263" duration="3000" />
       <workItem from="1624323480691" duration="7000" />
-      <workItem from="1624323502957" duration="517000" />
+      <workItem from="1624323502957" duration="811000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1617907518439</created>
@@ -117,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617962568200</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update">
+      <created>1624324065043</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1624324065043</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
